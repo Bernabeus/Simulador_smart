@@ -4,9 +4,7 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
+  padding-top: 6.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -113,4 +111,13 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.body {
+  background-size: cover;
+  background-size: 35rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 4%;
 }
