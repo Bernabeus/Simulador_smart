@@ -128,6 +128,7 @@ const PregAtencion = ({ onSelectionPreg }) => {
   const classes = useStyles();
   const router = useRouter();
   const [value1, setValue1] = useState(0);
+  const [valueA, setValueA] = useState(0);
   const [dataAp, setDataAp] = useState([]);
 
   const handleRadioChange1 = (event) => {
@@ -137,12 +138,14 @@ const PregAtencion = ({ onSelectionPreg }) => {
 
   useEffect(() => {
     newArray();
-  }, [onSelectionPreg]);
+  }, []);
 
   function newArray() {
     var arrayData = onSelectionPreg();
     //console.log(arrayData);
     setDataAp(arrayData);
+    //setValueA(arrayData[1]);
+    //console.log(arrayData[1]);
   }
 
   return (
@@ -180,6 +183,7 @@ const PregAtencion = ({ onSelectionPreg }) => {
                   </Grid>
                   <Grid className={classes.cont2}>
                     <RadioGroup
+                      defaultValue={valueA}
                       value={value1}
                       onChange={handleRadioChange1}
                       name="customized-radios"

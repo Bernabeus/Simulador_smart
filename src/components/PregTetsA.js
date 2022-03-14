@@ -3,9 +3,9 @@ import Grid from '@material-ui/core/Grid';
 import { useRouter } from 'next/router';
 import PregAtencion from './PregAtencion';
 import Button from '@material-ui/core/Button';
-import { dataAtencion } from 'src/components/DataTest.js';
+import { dataAtencion } from './DataTest.js';
 
-function PregTets() {
+const PregTets = ({ onValuesPreg }) => {
   const router = useRouter();
   const [value1, setValue1] = useState(0);
   const [value2, setValue2] = useState(0);
@@ -47,18 +47,17 @@ function PregTets() {
   const [value38, setValue38] = useState(0);
   const [value39, setValue39] = useState(0);
   const [value40, setValue40] = useState(0);
-  const [dataAp, setDataAp] = useState([]);
 
-  function newArray(data) {
+  function newArray(val) {
     let arrayN = [];
-    for (let i = 1; i <= data.length; i++) {
-      arrayN.push(data[i - 1]);
-    }
+    arrayN.push(dataAtencion[val]);
     return arrayN;
   }
 
   const handleChangeValue1 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(0);
+    //
+    //console.log('arreglo anterior', valoresV);
     if (valor != null) {
       setValue1(valor);
     }
@@ -66,316 +65,370 @@ function PregTets() {
   };
 
   const handleChangeValue2 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(1);
     if (valor != null) {
       setValue2(valor);
     }
-    return arrayD[1];
+    return arrayD[0];
   };
 
   const handleChangeValue3 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(2);
     if (valor != null) {
       setValue3(valor);
     }
-    return arrayD[2];
+    return arrayD[0];
   };
 
   const handleChangeValue4 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(3);
     if (valor != null) {
       setValue4(valor);
     }
-    return arrayD[3];
+    return arrayD[0];
   };
 
   const handleChangeValue5 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(4);
     if (valor != null) {
       setValue5(valor);
     }
-    return arrayD[4];
+    return arrayD[0];
   };
 
   const handleChangeValue6 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(5);
     if (valor != null) {
       setValue6(valor);
     }
-    return arrayD[5];
+    return arrayD[0];
   };
 
   const handleChangeValue7 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(6);
     if (valor != null) {
       setValue7(valor);
     }
-    return arrayD[6];
+    return arrayD[0];
   };
 
   const handleChangeValue8 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(7);
     if (valor != null) {
       setValue8(valor);
     }
-    return arrayD[7];
+    return arrayD[0];
   };
 
   const handleChangeValue9 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(8);
     if (valor != null) {
       setValue9(valor);
     }
-    return arrayD[8];
+    return arrayD[0];
   };
 
   const handleChangeValue10 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(9);
     if (valor != null) {
       setValue10(valor);
     }
-    return arrayD[9];
+    return arrayD[0];
   };
 
   const handleChangeValue11 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(10);
     if (valor != null) {
       setValue11(valor);
     }
-    return arrayD[10];
+    return arrayD[0];
   };
 
   const handleChangeValue12 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(11);
     if (valor != null) {
       setValue12(valor);
     }
-    return arrayD[11];
+    return arrayD[0];
   };
 
   const handleChangeValue13 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(12);
     if (valor != null) {
       setValue13(valor);
     }
-    return arrayD[12];
+    return arrayD[0];
   };
 
   const handleChangeValue14 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(13);
     if (valor != null) {
       setValue14(valor);
     }
-    return arrayD[13];
+    return arrayD[0];
   };
 
   const handleChangeValue15 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(14);
     if (valor != null) {
       setValue15(valor);
     }
-    return arrayD[14];
+    return arrayD[0];
   };
 
   const handleChangeValue16 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(15);
     if (valor != null) {
       setValue16(valor);
     }
-    return arrayD[15];
+    return arrayD[0];
   };
 
   const handleChangeValue17 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(16);
     if (valor != null) {
       setValue17(valor);
     }
-    return arrayD[16];
+    return arrayD[0];
   };
 
   const handleChangeValue18 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(17);
     if (valor != null) {
       setValue18(valor);
     }
-    return arrayD[17];
+    return arrayD[0];
   };
 
   const handleChangeValue19 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(18);
     if (valor != null) {
       setValue19(valor);
     }
-    return arrayD[18];
+    return arrayD[0];
   };
 
   const handleChangeValue20 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(19);
     if (valor != null) {
       setValue20(valor);
     }
-    return arrayD[19];
+    return arrayD[0];
   };
 
   const handleChangeValue21 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(20);
     if (valor != null) {
       setValue21(valor);
     }
-    return arrayD[20];
+    return arrayD[0];
   };
 
   const handleChangeValue22 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(21);
     if (valor != null) {
       setValue22(valor);
     }
-    return arrayD[21];
+    return arrayD[0];
   };
 
   const handleChangeValue23 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(22);
     if (valor != null) {
       setValue23(valor);
     }
-    return arrayD[22];
+    return arrayD[0];
   };
 
   const handleChangeValue24 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(23);
     if (valor != null) {
       setValue24(valor);
     }
-    return arrayD[23];
+    return arrayD[0];
   };
 
   const handleChangeValue25 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(24);
     if (valor != null) {
       setValue25(valor);
     }
-    return arrayD[24];
+    return arrayD[0];
   };
 
   const handleChangeValue26 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(25);
     if (valor != null) {
       setValue26(valor);
     }
-    return arrayD[25];
+    return arrayD[0];
   };
 
   const handleChangeValue27 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(26);
     if (valor != null) {
       setValue27(valor);
     }
-    return arrayD[26];
+    return arrayD[0];
   };
 
   const handleChangeValue28 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(27);
     if (valor != null) {
       setValue28(valor);
     }
-    return arrayD[27];
+    return arrayD[0];
   };
 
   const handleChangeValue29 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(28);
     if (valor != null) {
       setValue29(valor);
     }
-    return arrayD[28];
+    return arrayD[0];
   };
 
   const handleChangeValue30 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(29);
     if (valor != null) {
       setValue30(valor);
     }
-    return arrayD[29];
+    return arrayD[0];
   };
 
   const handleChangeValue31 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(30);
     if (valor != null) {
       setValue31(valor);
     }
-    return arrayD[30];
+    return arrayD[0];
   };
 
   const handleChangeValue32 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(31);
     if (valor != null) {
       setValue32(valor);
     }
-    return arrayD[31];
+    return arrayD[0];
   };
 
   const handleChangeValue33 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(32);
     if (valor != null) {
       setValue33(valor);
     }
-    return arrayD[32];
+    return arrayD[0];
   };
 
   const handleChangeValue34 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(33);
     if (valor != null) {
       setValue34(valor);
     }
-    return arrayD[33];
+    return arrayD[0];
   };
 
   const handleChangeValue35 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(34);
     if (valor != null) {
       setValue35(valor);
     }
-    return arrayD[34];
+    return arrayD[0];
   };
 
   const handleChangeValue36 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(35);
     if (valor != null) {
       setValue36(valor);
     }
-    return arrayD[35];
+    return arrayD[0];
   };
 
   const handleChangeValue37 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(36);
     if (valor != null) {
       setValue37(valor);
     }
-    return arrayD[36];
+    return arrayD[0];
   };
 
   const handleChangeValue38 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(37);
     if (valor != null) {
       setValue38(valor);
     }
-    return arrayD[37];
+    return arrayD[0];
   };
 
   const handleChangeValue39 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(38);
     if (valor != null) {
       setValue39(valor);
     }
-    return arrayD[38];
+    return arrayD[0];
   };
 
   const handleChangeValue40 = (valor) => {
-    var arrayD = newArray(dataAtencion);
+    var arrayD = newArray(39);
     if (valor != null) {
       setValue40(valor);
     }
-    return arrayD[39];
+    return arrayD[0];
   };
+
+  async function sendValues() {
+    const arrayA = [];
+    arrayA.push(value1);
+    arrayA.push(value2);
+    arrayA.push(value3);
+    arrayA.push(value4);
+    arrayA.push(value5);
+    arrayA.push(value6);
+    arrayA.push(value7);
+    arrayA.push(value8);
+    arrayA.push(value9);
+    arrayA.push(value10);
+    arrayA.push(value11);
+    arrayA.push(value12);
+    arrayA.push(value13);
+    arrayA.push(value14);
+    arrayA.push(value15);
+    arrayA.push(value16);
+    arrayA.push(value17);
+    arrayA.push(value18);
+    arrayA.push(value19);
+    arrayA.push(value20);
+    arrayA.push(value21);
+    arrayA.push(value22);
+    arrayA.push(value23);
+    arrayA.push(value24);
+    arrayA.push(value25);
+    arrayA.push(value26);
+    arrayA.push(value27);
+    arrayA.push(value28);
+    arrayA.push(value29);
+    arrayA.push(value30);
+    arrayA.push(value31);
+    arrayA.push(value32);
+    arrayA.push(value33);
+    arrayA.push(value34);
+    arrayA.push(value35);
+    arrayA.push(value36);
+    arrayA.push(value37);
+    arrayA.push(value38);
+    arrayA.push(value39);
+    arrayA.push(value40);
+
+    var puntaje = 0;
+
+    for (var i = 0; i < dataAtencion.length; i++) {
+      if (arrayA[i] == dataAtencion[i].answerC) {
+        puntaje = puntaje + 1;
+      }
+    }
+    var estado = 2;
+    onValuesPreg(puntaje, arrayA, estado);
+  }
 
   return (
     <Grid>
@@ -499,10 +552,11 @@ function PregTets() {
       <Grid>
         <PregAtencion onSelectionPreg={handleChangeValue40} />
       </Grid>
+
       <Grid style={{ paddingBottom: 30, textAlign: 'center' }}>
         <Button
-          type="submit"
           variant="outlined"
+          onClick={() => sendValues()}
           style={{
             fontFamily: 'Montserrat',
             fontWeight: 'bold',
@@ -515,6 +569,9 @@ function PregTets() {
       </Grid>
     </Grid>
   );
-}
+};
 
 export default PregTets;
+/*
+
+       */

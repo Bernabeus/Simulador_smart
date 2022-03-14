@@ -2,11 +2,12 @@ export const dataAtencion = [
   {
     id: 1,
     question:
-      'Escoja exactamente el mismo grupo de letras que se encuentra en comillas. Dsl, "Dls",',
+      'Escoja exactamente el mismo grupo de letras que se encuentra en comillas. Dsl, "Dls", LSd, sLd, SDl',
     answer1: 'DsL',
     answer2: 'Dls',
     answer3: 'sdl',
     answer4: 'DLs',
+    answerC: 'Dls',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const dataAtencion = [
     answer2: 'CQ85LD',
     answer3: 'D5LQ8C',
     answer4: '8L5COD',
+    answerC: '8L5COD',
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const dataAtencion = [
     answer2: '19863',
     answer3: '86931',
     answer4: '31798',
+    answerC: '31798',
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ export const dataAtencion = [
     answer2: '794658137122',
     answer3: '784656137122',
     answer4: '784656137124',
+    answerC: '784658137124',
   },
   {
     id: 5,
@@ -42,6 +46,7 @@ export const dataAtencion = [
     answer2: 'Nombre distinto y dirección igual',
     answer3: 'Dirección distinta y nombre igual',
     answer4: 'Nombre y dirección distintos',
+    answerC: 'Nombre distinto y dirección igual',
   },
   {
     id: 6,
@@ -51,6 +56,7 @@ export const dataAtencion = [
     answer2: 'Sapo',
     answer3: 'Atraso',
     answer4: 'Escuela',
+    answerC: 'Atraso',
   },
   {
     id: 7,
@@ -60,6 +66,7 @@ export const dataAtencion = [
     answer2: 'btP',
     answer3: 'PbT',
     answer4: 'pBT',
+    answerC: 'pBT',
   },
   {
     id: 8,
@@ -69,6 +76,7 @@ export const dataAtencion = [
     answer2: '0FO7DE',
     answer3: 'ODE70F',
     answer4: 'EDFO70',
+    answerC: 'F0CDE7',
   },
   {
     id: 9,
@@ -78,6 +86,7 @@ export const dataAtencion = [
     answer2: 'Melancólico',
     answer3: 'Mental',
     answer4: 'Mezcal',
+    answerC: 'Membrete',
   },
   {
     id: 10,
@@ -87,6 +96,7 @@ export const dataAtencion = [
     answer2: '12',
     answer3: '13',
     answer4: '14',
+    answerC: '12',
   },
   {
     id: 11,
@@ -96,6 +106,7 @@ export const dataAtencion = [
     answer2: 'btP',
     answer3: 'PbT',
     answer4: 'pBT',
+    answerC: 'pBT',
   },
   {
     id: 12,
@@ -105,6 +116,7 @@ export const dataAtencion = [
     answer2: 'CL4S6D',
     answer3: '6LDCS4',
     answer4: 'D6I4CS',
+    answerC: 'D6I4CS',
   },
   {
     id: 13,
@@ -114,6 +126,7 @@ export const dataAtencion = [
     answer2: '52871',
     answer3: '79125',
     answer4: '18275',
+    answerC: '79125',
   },
   {
     id: 14,
@@ -122,6 +135,7 @@ export const dataAtencion = [
     answer2: '7845323678',
     answer3: '7846393678',
     answer4: '7846363278',
+    answerC: '7846323678',
   },
   {
     id: 15,
@@ -131,6 +145,7 @@ export const dataAtencion = [
     answer2: 'Nombre distinto y dirección igual',
     answer3: 'Dirección distinta y nombre igual',
     answer4: 'Nombre y dirección distintos',
+    answerC: 'Nombres y direcciones iguales',
   },
   {
     id: 16,
@@ -140,6 +155,7 @@ export const dataAtencion = [
     answer2: 'Sapo',
     answer3: 'Atraso',
     answer4: 'Escuela',
+    answerC: 'Atraso',
   },
   {
     id: 17,
@@ -149,6 +165,7 @@ export const dataAtencion = [
     answer2: 'Mru',
     answer3: 'Urm',
     answer4: 'RUM',
+    answerC: 'Urm',
   },
   {
     id: 18,
@@ -158,6 +175,7 @@ export const dataAtencion = [
     answer2: 'WIv',
     answer3: 'IVw',
     answer4: 'Ivw',
+    answerC: 'Ivw',
   },
   {
     id: 19,
@@ -167,6 +185,7 @@ export const dataAtencion = [
     answer2: 'Membrete',
     answer3: 'Mental',
     answer4: 'ezcal',
+    answerC: 'Membrete',
   },
   {
     id: 20,
@@ -176,6 +195,7 @@ export const dataAtencion = [
     answer2: '4',
     answer3: '5',
     answer4: '6',
+    answerC: '6',
   },
   {
     id: 21,
@@ -185,6 +205,7 @@ export const dataAtencion = [
     answer2: 'qMZ',
     answer3: 'QMz',
     answer4: 'QMZ',
+    answerC: 'qMZ',
   },
   {
     id: 22,
@@ -194,6 +215,7 @@ export const dataAtencion = [
     answer2: '0FO7DE',
     answer3: 'ODE70F',
     answer4: 'EDFO70',
+    answerC: 'F0CDE7',
   },
   {
     id: 23,
@@ -203,6 +225,7 @@ export const dataAtencion = [
     answer2: '63951',
     answer3: '35916',
     answer4: '96523',
+    answerC: '96523',
   },
   {
     id: 24,
@@ -211,6 +234,7 @@ export const dataAtencion = [
     answer2: '3278467625',
     answer3: '3678467824',
     answer4: '3276467824',
+    answerC: '3276467824',
   },
   {
     id: 25,
@@ -220,6 +244,7 @@ export const dataAtencion = [
     answer2: 'Nombre distinto y dirección igual',
     answer3: 'Dirección distinta y nombre igual',
     answer4: 'Nombre y dirección distintos',
+    answerC: 'Nombres y direcciones iguales',
   },
   {
     id: 26,
@@ -229,6 +254,7 @@ export const dataAtencion = [
     answer2: 'nTrl',
     answer3: 'NLTr',
     answer4: 'Nltr',
+    answerC: 'NLTr',
   },
   {
     id: 27,
@@ -238,6 +264,7 @@ export const dataAtencion = [
     answer2: 'HL2D8R',
     answer3: 'ID2HR8',
     answer4: 'HIDR8',
+    answerC: 'HL2D8R',
   },
   {
     id: 28,
@@ -247,6 +274,7 @@ export const dataAtencion = [
     answer2: '4',
     answer3: '6',
     answer4: '5',
+    answerC: '6',
   },
   {
     id: 29,
@@ -256,6 +284,7 @@ export const dataAtencion = [
     answer2: 'Nombre distinto y dirección igual',
     answer3: 'Dirección distinta y nombre igual',
     answer4: 'Nombre y dirección distintos',
+    answerC: 'Dirección distinta y nombre igual',
   },
   {
     id: 30,
@@ -265,6 +294,7 @@ export const dataAtencion = [
     answer2: '76324',
     answer3: '24736',
     answer4: '63742',
+    answerC: '42375',
   },
   {
     id: 31,
@@ -274,6 +304,7 @@ export const dataAtencion = [
     answer2: 'LxPs',
     answer3: 'LCpS',
     answer4: 'lXsp',
+    answerC: 'lXsp',
   },
   {
     id: 32,
@@ -283,6 +314,7 @@ export const dataAtencion = [
     answer2: 'HL2D8R',
     answer3: 'ID2HR8',
     answer4: '2HIDR8',
+    answerC: 'HL2D8R',
   },
   {
     id: 33,
@@ -292,6 +324,7 @@ export const dataAtencion = [
     answer2: 'DQCXG',
     answer3: 'CQXGD',
     answer4: 'XBGQC',
+    answerC: 'XBGQC',
   },
   {
     id: 34,
@@ -300,6 +333,7 @@ export const dataAtencion = [
     answer2: '4387317813',
     answer3: '4687317815',
     answer4: '4687417813',
+    answerC: '4387317813',
   },
   {
     id: 35,
@@ -309,6 +343,7 @@ export const dataAtencion = [
     answer2: 'Nombre distinto y dirección igual',
     answer3: 'Dirección distinta y nombre igual',
     answer4: 'Nombre y dirección distintos',
+    answerC: 'Nombres y direcciones iguales',
   },
   {
     id: 36,
@@ -318,6 +353,7 @@ export const dataAtencion = [
     answer2: '5',
     answer3: '4',
     answer4: '2',
+    answerC: '3',
   },
   {
     id: 37,
@@ -327,6 +363,7 @@ export const dataAtencion = [
     answer2: '3',
     answer3: '2',
     answer4: '5',
+    answerC: '3',
   },
   {
     id: 38,
@@ -336,6 +373,7 @@ export const dataAtencion = [
     answer2: 'OPXCL',
     answer3: 'XOCIP',
     answer4: 'LXPOC',
+    answerC: 'XOCIP',
   },
   {
     id: 39,
@@ -345,6 +383,7 @@ export const dataAtencion = [
     answer2: 'TJRFY',
     answer3: 'RYFLT',
     answer4: 'YJTRF',
+    answerC: 'RYFLT',
   },
   {
     id: 40,
@@ -354,6 +393,7 @@ export const dataAtencion = [
     answer2: 'cqK',
     answer3: 'qck',
     answer4: 'CqK',
+    answerC: 'Qkc',
   },
 ];
 export const dataRazonamientoL = [
@@ -365,6 +405,7 @@ export const dataRazonamientoL = [
     answer2: 'b',
     answer3: 'c',
     answer4: 'f',
+    answerC: 'a',
   },
   {
     id: 2,
@@ -373,6 +414,7 @@ export const dataRazonamientoL = [
     answer2: 'm',
     answer3: 'l',
     answer4: 'j',
+    answerC: 'ñ',
   },
   {
     id: 3,
@@ -382,6 +424,7 @@ export const dataRazonamientoL = [
     answer2: 'i',
     answer3: 'v',
     answer4: 'j',
+    answerC: 'v',
   },
   {
     id: 4,
@@ -390,6 +433,7 @@ export const dataRazonamientoL = [
     answer2: 't',
     answer3: 'r',
     answer4: 'q',
+    answerC: 'o',
   },
   {
     id: 5,
@@ -399,6 +443,7 @@ export const dataRazonamientoL = [
     answer2: 'e',
     answer3: 'd',
     answer4: 'y',
+    answerC: 'y',
   },
   {
     id: 6,
@@ -408,6 +453,7 @@ export const dataRazonamientoL = [
     answer2: 'cuento',
     answer3: 'mental',
     answer4: 'membrana',
+    answerC: 'victoria',
   },
   {
     id: 7,
@@ -417,6 +463,7 @@ export const dataRazonamientoL = [
     answer2: 'cauto',
     answer3: 'caizo',
     answer4: 'saco',
+    answerC: 'saco',
   },
   {
     id: 8,
@@ -426,6 +473,7 @@ export const dataRazonamientoL = [
     answer2: 'melancólico',
     answer3: 'mental',
     answer4: 'mezcal',
+    answerC: 'membrete',
   },
   {
     id: 9,
@@ -435,6 +483,7 @@ export const dataRazonamientoL = [
     answer2: 'j',
     answer3: 'h',
     answer4: 'g',
+    answerC: 'i',
   },
   {
     id: 10,
@@ -444,6 +493,7 @@ export const dataRazonamientoL = [
     answer2: 'i',
     answer3: '4',
     answer4: '3',
+    answerC: '3',
   },
   {
     id: 11,
@@ -453,6 +503,7 @@ export const dataRazonamientoL = [
     answer2: '13',
     answer3: '14',
     answer4: '16',
+    answerC: '16',
   },
   {
     id: 12,
@@ -462,6 +513,7 @@ export const dataRazonamientoL = [
     answer2: '37',
     answer3: '48',
     answer4: '42',
+    answerC: '37',
   },
   {
     id: 13,
@@ -471,6 +523,7 @@ export const dataRazonamientoL = [
     answer2: '49',
     answer3: '54',
     answer4: '75',
+    answerC: '49',
   },
   {
     id: 14,
@@ -480,6 +533,7 @@ export const dataRazonamientoL = [
     answer2: '360',
     answer3: '480',
     answer4: '560',
+    answerC: '480',
   },
   {
     id: 15,
@@ -489,6 +543,7 @@ export const dataRazonamientoL = [
     answer2: '11',
     answer3: '12',
     answer4: '15',
+    answerC: '9',
   },
   {
     id: 16,
@@ -498,6 +553,7 @@ export const dataRazonamientoL = [
     answer2: '105',
     answer3: '110',
     answer4: '115',
+    answerC: '105',
   },
   {
     id: 17,
@@ -507,6 +563,7 @@ export const dataRazonamientoL = [
     answer2: '23',
     answer3: '25',
     answer4: '26',
+    answerC: '23',
   },
   {
     id: 18,
@@ -516,6 +573,7 @@ export const dataRazonamientoL = [
     answer2: '144',
     answer3: '158',
     answer4: '216',
+    answerC: '216',
   },
   {
     id: 19,
@@ -525,6 +583,7 @@ export const dataRazonamientoL = [
     answer2: '19',
     answer3: '22',
     answer4: '27',
+    answerC: '19',
   },
   {
     id: 20,
@@ -534,6 +593,7 @@ export const dataRazonamientoL = [
     answer2: '44',
     answer3: '46',
     answer4: '54',
+    answerC: '46',
   },
   {
     id: 21,
@@ -543,6 +603,7 @@ export const dataRazonamientoL = [
     answer2: '37',
     answer3: '39',
     answer4: '40',
+    answerC: '40',
   },
   {
     id: 22,
@@ -552,6 +613,7 @@ export const dataRazonamientoL = [
     answer2: '25',
     answer3: '26',
     answer4: '28',
+    answerC: '26',
   },
   {
     id: 23,
@@ -561,6 +623,7 @@ export const dataRazonamientoL = [
     answer2: '60',
     answer3: '61',
     answer4: '62',
+    answerC: '60',
   },
   {
     id: 24,
@@ -570,6 +633,7 @@ export const dataRazonamientoL = [
     answer2: '13',
     answer3: '16',
     answer4: '12',
+    answerC: '12',
   },
   {
     id: 25,
@@ -579,6 +643,7 @@ export const dataRazonamientoL = [
     answer2: '37',
     answer3: '39',
     answer4: '34',
+    answerC: '40',
   },
   {
     id: 26,
@@ -588,6 +653,7 @@ export const dataRazonamientoL = [
     answer2: '17',
     answer3: '18',
     answer4: '19',
+    answerC: '19',
   },
   {
     id: 27,
@@ -597,6 +663,7 @@ export const dataRazonamientoL = [
     answer2: '24',
     answer3: '28',
     answer4: '25',
+    answerC: '26',
   },
   {
     id: 28,
@@ -606,6 +673,7 @@ export const dataRazonamientoL = [
     answer2: '7',
     answer3: '4',
     answer4: '5',
+    answerC: '5',
   },
   {
     id: 29,
@@ -615,6 +683,7 @@ export const dataRazonamientoL = [
     answer2: '11',
     answer3: '13',
     answer4: '9',
+    answerC: '13',
   },
   {
     id: 30,
@@ -624,6 +693,7 @@ export const dataRazonamientoL = [
     answer2: '324',
     answer3: '648',
     answer4: '432',
+    answerC: '432',
   },
   {
     id: 31,
@@ -633,6 +703,7 @@ export const dataRazonamientoL = [
     answer2: '246',
     answer3: '436',
     answer4: '356',
+    answerC: '356',
   },
   {
     id: 32,
@@ -642,6 +713,7 @@ export const dataRazonamientoL = [
     answer2: '265',
     answer3: '234',
     answer4: '284',
+    answerC: '247',
   },
   {
     id: 33,
@@ -651,6 +723,7 @@ export const dataRazonamientoL = [
     answer2: '923',
     answer3: '951',
     answer4: '942',
+    answerC: '931',
   },
   {
     id: 34,
@@ -660,6 +733,7 @@ export const dataRazonamientoL = [
     answer2: '128',
     answer3: '169',
     answer4: '147',
+    answerC: '169',
   },
   {
     id: 35,
@@ -669,6 +743,7 @@ export const dataRazonamientoL = [
     answer2: '856',
     answer3: '758',
     answer4: '952',
+    answerC: '952',
   },
   {
     id: 36,
@@ -678,6 +753,7 @@ export const dataRazonamientoL = [
     answer2: 'jl',
     answer3: 'jk',
     answer4: 'lm',
+    answerC: '21',
   },
   {
     id: 37,
@@ -687,6 +763,7 @@ export const dataRazonamientoL = [
     answer2: 'i',
     answer3: '4',
     answer4: '3',
+    answerC: '3',
   },
   {
     id: 38,
@@ -696,6 +773,7 @@ export const dataRazonamientoL = [
     answer2: '796',
     answer3: '825',
     answer4: '726',
+    answerC: '796',
   },
   {
     id: 39,
@@ -705,6 +783,7 @@ export const dataRazonamientoL = [
     answer2: 'p',
     answer3: 'q',
     answer4: 't',
+    answerC: 't',
   },
   {
     id: 40,
@@ -714,6 +793,7 @@ export const dataRazonamientoL = [
     answer2: 'b',
     answer3: 'f',
     answer4: 'g',
+    answerC: 'b',
   },
   {
     id: 41,
@@ -723,6 +803,7 @@ export const dataRazonamientoL = [
     answer2: 'f',
     answer3: 'd',
     answer4: 'x',
+    answerC: 'd',
   },
   {
     id: 42,
@@ -732,6 +813,7 @@ export const dataRazonamientoL = [
     answer2: 'h',
     answer3: 'i',
     answer4: 'k',
+    answerC: 'h',
   },
   {
     id: 43,
@@ -741,6 +823,7 @@ export const dataRazonamientoL = [
     answer2: 'n',
     answer3: 'm',
     answer4: 'c',
+    answerC: 'ñ',
   },
   {
     id: 44,
@@ -750,6 +833,7 @@ export const dataRazonamientoL = [
     answer2: 'q',
     answer3: 'n',
     answer4: 'p',
+    answerC: 'p',
   },
   {
     id: 45,
@@ -758,6 +842,7 @@ export const dataRazonamientoL = [
     answer2: 'r',
     answer3: 'o',
     answer4: 't',
+    answerC: 'o',
   },
   {
     id: 46,
@@ -767,6 +852,7 @@ export const dataRazonamientoL = [
     answer2: 'j',
     answer3: 'i',
     answer4: 'l',
+    answerC: 'j',
   },
 ];
 export const dataRazonamientoV = [
@@ -777,6 +863,7 @@ export const dataRazonamientoV = [
     answer2: 'Modesto',
     answer3: 'Ecuánime',
     answer4: 'Pesado',
+    answerC: 'Ecuánime',
   },
   {
     id: 2,
@@ -785,6 +872,7 @@ export const dataRazonamientoV = [
     answer2: 'Transparente',
     answer3: 'Claro',
     answer4: 'Sombrío',
+    answerC: 'Transparente',
   },
   {
     id: 3,
@@ -793,6 +881,7 @@ export const dataRazonamientoV = [
     answer2: 'Artista',
     answer3: 'Monje',
     answer4: 'Soltero',
+    answerC: 'Soltero',
   },
   {
     id: 4,
@@ -801,6 +890,7 @@ export const dataRazonamientoV = [
     answer2: 'Chistoso',
     answer3: 'Majestuoso',
     answer4: 'Holgazán',
+    answerC: 'Holgazán',
   },
   {
     id: 5,
@@ -809,6 +899,7 @@ export const dataRazonamientoV = [
     answer2: 'Interferir',
     answer3: 'Incluir',
     answer4: 'Deducir',
+    answerC: 'Deducir',
   },
   {
     id: 6,
@@ -819,6 +910,7 @@ export const dataRazonamientoV = [
     answer3: 'Xilografía',
     answer4: 'Cerámica',
     answer5: 'Bastón',
+    answerC: 'Bastón',
   },
   {
     id: 7,
@@ -829,6 +921,7 @@ export const dataRazonamientoV = [
     answer3: 'Televisión',
     answer4: 'Cocina',
     answer5: 'Celular',
+    answerC: 'Cocina',
   },
   {
     id: 8,
@@ -839,6 +932,7 @@ export const dataRazonamientoV = [
     answer3: 'Montaña',
     answer4: 'Arena',
     answer5: 'Bronceador',
+    answerC: 'Bronceador',
   },
   {
     id: 9,
@@ -849,6 +943,7 @@ export const dataRazonamientoV = [
     answer3: 'Coma',
     answer4: 'Tilde',
     answer5: 'Punto',
+    answerC: 'Tono',
   },
   {
     id: 10,
@@ -859,6 +954,7 @@ export const dataRazonamientoV = [
     answer3: 'Dulcificar',
     answer4: 'Endulzar',
     answer5: 'Acaramelar',
+    answerC: 'Embadurnar',
   },
   {
     id: 11,
@@ -869,6 +965,7 @@ export const dataRazonamientoV = [
     answer3: 'Inauténtico',
     answer4: 'Fingido',
     answer5: 'Deteriorado',
+    answerC: 'Deteriorado',
   },
   {
     id: 12,
@@ -879,6 +976,7 @@ export const dataRazonamientoV = [
     answer3: 'Correr',
     answer4: 'Marchar',
     answer5: 'Mover',
+    answerC: 'Mover',
   },
   {
     id: 13,
@@ -889,6 +987,7 @@ export const dataRazonamientoV = [
     answer3: 'Caballo',
     answer4: 'Chimpancé',
     answer5: 'Elefante',
+    answerC: 'Tortuga',
   },
   {
     id: 14,
@@ -899,6 +998,7 @@ export const dataRazonamientoV = [
     answer3: 'Masticación',
     answer4: 'Deglución',
     answer5: 'Salivación',
+    answerC: 'Exhumación',
   },
   {
     id: 15,
@@ -909,6 +1009,7 @@ export const dataRazonamientoV = [
     answer3: 'Porfiado',
     answer4: 'Contumaz',
     answer5: 'Testarudo',
+    answerC: 'Injuriante',
   },
   {
     id: 16,
@@ -918,6 +1019,7 @@ export const dataRazonamientoV = [
     answer2: 'Red',
     answer3: 'Caña',
     answer4: 'Araña',
+    answerC: 'Araña',
   },
   {
     id: 17,
@@ -927,6 +1029,7 @@ export const dataRazonamientoV = [
     answer2: 'Aspiradora',
     answer3: 'Escoba',
     answer4: 'Paños',
+    answerC: 'Escoba',
   },
   {
     id: 18,
@@ -936,6 +1039,7 @@ export const dataRazonamientoV = [
     answer2: 'Opinión',
     answer3: 'Temor',
     answer4: 'Error',
+    answerC: 'Seguridad',
   },
   {
     id: 19,
@@ -945,6 +1049,7 @@ export const dataRazonamientoV = [
     answer2: 'Acción',
     answer3: 'Emoción',
     answer4: 'Secarse',
+    answerC: 'Acción',
   },
   {
     id: 20,
@@ -954,6 +1059,7 @@ export const dataRazonamientoV = [
     answer2: 'Pinacoteca',
     answer3: 'Osario',
     answer4: 'Gliptoteca',
+    answerC: 'Hemeroteca',
   },
   {
     id: 21,
@@ -963,6 +1069,7 @@ export const dataRazonamientoV = [
     answer2: 'Magnitud',
     answer3: 'Cilindraje',
     answer4: 'Capacidad',
+    answerC: 'Volumen',
   },
   {
     id: 22,
@@ -972,6 +1079,7 @@ export const dataRazonamientoV = [
     answer2: 'Calentar',
     answer3: 'Protección',
     answer4: 'Enfriar',
+    answerC: 'Calentar',
   },
   {
     id: 23,
@@ -981,6 +1089,7 @@ export const dataRazonamientoV = [
     answer2: 'Aumentar',
     answer3: 'Descontar',
     answer4: 'Apadrinar',
+    answerC: 'Descontar',
   },
   {
     id: 24,
@@ -990,6 +1099,7 @@ export const dataRazonamientoV = [
     answer2: 'Justo',
     answer3: 'Robusta',
     answer4: 'Rebanada',
+    answerC: 'Rebanada',
   },
   {
     id: 25,
@@ -999,6 +1109,7 @@ export const dataRazonamientoV = [
     answer2: 'Gas',
     answer3: 'Circulo',
     answer4: 'Metal',
+    answerC: 'Circulo',
   },
   {
     id: 26,
@@ -1008,6 +1119,7 @@ export const dataRazonamientoV = [
     answer2: 'Doménica está en la cancha',
     answer3: 'Andrea está en la cancha',
     answer4: 'La hermana de Andrea sabe jugar futbol',
+    answerC: 'La hermana de Andrea sabe jugar futbol',
   },
   {
     id: 27,
@@ -1017,6 +1129,7 @@ export const dataRazonamientoV = [
     answer2: 'A Harry le gustan las competencias de motocicletas',
     answer3: 'A todos los que les gusta las motocicletas saben de mecánica',
     answer4: 'Harry es motociclista',
+    answerC: 'Harry sabe más de mecánica que Stalin',
   },
   {
     id: 28,
@@ -1026,6 +1139,7 @@ export const dataRazonamientoV = [
     answer2: 'Pasado mañana Alejandra tiene libre',
     answer3: 'Todos los miércoles Alejandra tiene una reunión',
     answer4: 'Ayer Alejandra tenía que trabajar',
+    answerC: 'Alejandra va hoy al gimnasio',
   },
   {
     id: 29,
@@ -1037,6 +1151,8 @@ export const dataRazonamientoV = [
     answer3:
       'Todos los adultos que están en la entrada de la escuela son padres de familia',
     answer4: 'Todos los padres de familia llevan a sus hijos a la escuela',
+    answerC:
+      'Algunos niños están acompañados de sus padres en la entrada de la escuela',
   },
   {
     id: 30,
@@ -1046,6 +1162,7 @@ export const dataRazonamientoV = [
     answer2: 'El amigo de Andrés no sabe nadar',
     answer3: 'El amigo de Andrés es nadador',
     answer4: 'Fabricio es el amigo de Andrés',
+    answerC: 'El amigo de Andrés es nadador',
   },
   {
     id: 31,
@@ -1056,6 +1173,8 @@ export const dataRazonamientoV = [
     answer2: 'Nadie sabe lo que tiene hasta que lo pierde',
     answer3: 'Un rey muere cuando ya ha cumplido su puesto',
     answer4:
+      'Si una persona renuncia, la organización la sustituirá rápidamente',
+    answerC:
       'Si una persona renuncia, la organización la sustituirá rápidamente',
   },
   {
@@ -1068,6 +1187,8 @@ export const dataRazonamientoV = [
       'Es mejor hacer tu propio camino y no dejarte influenciar por los demás',
     answer4:
       'Hace referencia a las personas que hacen lo que los demás les piden',
+    answerC:
+      'Hace referencia a las personas que hacen lo que los demás les piden',
   },
   {
     id: 33,
@@ -1077,6 +1198,7 @@ export const dataRazonamientoV = [
     answer2: 'Una persona debe hacer lo que se le pide',
     answer3: 'Hay que mantenerse siempre juntos, solo no se logra nada',
     answer4: 'La excepción no hace la norma',
+    answerC: 'La excepción no hace la norma',
   },
   {
     id: 34,
@@ -1086,6 +1208,7 @@ export const dataRazonamientoV = [
     answer2: 'Cuando te regalan algo, debes aceptarlo, aunque no te guste',
     answer3: 'La familia me ayuda a salir adelante',
     answer4: 'SN',
+    answerC: 'SN',
   },
   {
     id: 35,
@@ -1095,6 +1218,7 @@ export const dataRazonamientoV = [
     answer2: 'Cuando te regalan algo, debes aceptarlo, aunque no te guste',
     answer3: 'La familia me ayuda a salir adelante',
     answer4: 'Cuando haya un mal tiempo es culpa de los otros',
+    answerC: 'Cada situación nos deja un aprendizaje',
   },
   {
     id: 36,
@@ -1104,6 +1228,7 @@ export const dataRazonamientoV = [
     answer2: 'Marcelo llego tercero',
     answer3: 'Paul es rápido',
     answer4: 'Diego llegó tercero',
+    answerC: 'Marcelo llego tercero',
   },
   {
     id: 37,
@@ -1113,6 +1238,7 @@ export const dataRazonamientoV = [
     answer2: 'La amiga de Camila saco mejor calificación que Camila',
     answer3: 'Camila reprobó el examen',
     answer4: 'María es amiga de Camila',
+    answerC: 'Algunas personas sacaron mejor calificación que Camila',
   },
   {
     id: 38,
@@ -1122,6 +1248,7 @@ export const dataRazonamientoV = [
     answer2: 'Verónica es panadera',
     answer3: 'Verónica es amiga de José',
     answer4: 'A José le gusta el pan',
+    answerC: 'A José le gusta el pan',
   },
   {
     id: 39,
@@ -1131,6 +1258,7 @@ export const dataRazonamientoV = [
     answer2: 'Sergio utiliza su primera bicicleta',
     answer3: 'Todos los amigos de Sergio tienen bicicleta',
     answer4: 'Sergio ya no quiere más bicicletas',
+    answerC: 'Algunos de los amigos de Sergio tienen bicicleta',
   },
   {
     id: 40,
@@ -1140,6 +1268,7 @@ export const dataRazonamientoV = [
     answer2: 'Manuel es más alto que Gabriel',
     answer3: 'Fernando es más bajo que Manuel',
     answer4: 'Gabriel es más alto que Priscila',
+    answerC: 'Fernando es el más alto de su clase',
   },
 ];
 export const dataRazonamientoN = [
@@ -1150,6 +1279,7 @@ export const dataRazonamientoN = [
     answer2: '-',
     answer3: '*',
     answer4: '/',
+    answerC: '-',
   },
   {
     id: 2,
@@ -1158,6 +1288,7 @@ export const dataRazonamientoN = [
     answer2: '-',
     answer3: '*',
     answer4: '/',
+    answerC: '+',
   },
   {
     id: 3,
@@ -1166,6 +1297,7 @@ export const dataRazonamientoN = [
     answer2: '-',
     answer3: '*',
     answer4: '/',
+    answerC: '/',
   },
   {
     id: 4,
@@ -1174,6 +1306,7 @@ export const dataRazonamientoN = [
     answer2: '-',
     answer3: '*',
     answer4: '/',
+    answerC: '+',
   },
   {
     id: 5,
@@ -1182,6 +1315,7 @@ export const dataRazonamientoN = [
     answer2: '14',
     answer3: '23',
     answer4: '21',
+    answerC: '14',
   },
   {
     id: 6,
@@ -1190,6 +1324,7 @@ export const dataRazonamientoN = [
     answer2: '18',
     answer3: '19',
     answer4: '20',
+    answerC: '18',
   },
   {
     id: 7,
@@ -1198,6 +1333,7 @@ export const dataRazonamientoN = [
     answer2: '37',
     answer3: '47',
     answer4: '45',
+    answerC: '37',
   },
   {
     id: 8,
@@ -1206,6 +1342,7 @@ export const dataRazonamientoN = [
     answer2: '/....+',
     answer3: '+....*',
     answer4: '*....+',
+    answerC: '*...-',
   },
   {
     id: 9,
@@ -1214,6 +1351,7 @@ export const dataRazonamientoN = [
     answer2: '+.../',
     answer3: '*...-',
     answer4: '-...*',
+    answerC: '-...*',
   },
   {
     id: 10,
@@ -1223,6 +1361,7 @@ export const dataRazonamientoN = [
     answer2: '2',
     answer3: '3',
     answer4: '4',
+    answerC: '2',
   },
   {
     id: 11,
@@ -1231,6 +1370,7 @@ export const dataRazonamientoN = [
     answer2: '*...-',
     answer3: '-...*',
     answer4: '*...+',
+    answerC: '-...*',
   },
   {
     id: 12,
@@ -1240,6 +1380,7 @@ export const dataRazonamientoN = [
     answer2: '4',
     answer3: '5',
     answer4: '6',
+    answerC: '3',
   },
   {
     id: 13,
@@ -1249,6 +1390,7 @@ export const dataRazonamientoN = [
     answer2: '3',
     answer3: '2',
     answer4: '1',
+    answerC: '3',
   },
   {
     id: 14,
@@ -1258,6 +1400,7 @@ export const dataRazonamientoN = [
     answer2: '5',
     answer3: '3',
     answer4: '7',
+    answerC: '5',
   },
   {
     id: 15,
@@ -1267,6 +1410,7 @@ export const dataRazonamientoN = [
     answer2: '1',
     answer3: '4',
     answer4: '2',
+    answerC: '3',
   },
   {
     id: 16,
@@ -1276,6 +1420,7 @@ export const dataRazonamientoN = [
     answer2: '5',
     answer3: '4',
     answer4: '2',
+    answerC: '2',
   },
   {
     id: 17,
@@ -1285,6 +1430,7 @@ export const dataRazonamientoN = [
     answer2: '1',
     answer3: '3',
     answer4: '2',
+    answerC: '3',
   },
   {
     id: 18,
@@ -1294,6 +1440,7 @@ export const dataRazonamientoN = [
     answer2: '2',
     answer3: '3',
     answer4: '4',
+    answerC: '1',
   },
   {
     id: 19,
@@ -1303,6 +1450,7 @@ export const dataRazonamientoN = [
     answer2: '3',
     answer3: '2',
     answer4: '1',
+    answerC: '2',
   },
   {
     id: 20,
@@ -1312,6 +1460,7 @@ export const dataRazonamientoN = [
     answer2: '292',
     answer3: '310',
     answer4: '322',
+    answerC: '322',
   },
   {
     id: 21,
@@ -1321,6 +1470,7 @@ export const dataRazonamientoN = [
     answer2: '46',
     answer3: '136',
     answer4: '60',
+    answerC: '64',
   },
   {
     id: 22,
@@ -1330,6 +1480,7 @@ export const dataRazonamientoN = [
     answer2: '140',
     answer3: '170',
     answer4: '200',
+    answerC: '200',
   },
   {
     id: 23,
@@ -1339,6 +1490,7 @@ export const dataRazonamientoN = [
     answer2: '864',
     answer3: '816',
     answer4: '216',
+    answerC: '864',
   },
   {
     id: 24,
@@ -1348,6 +1500,7 @@ export const dataRazonamientoN = [
     answer2: '5.25',
     answer3: '5.75',
     answer4: '6.75',
+    answerC: '5.25',
   },
   {
     id: 25,
@@ -1356,6 +1509,7 @@ export const dataRazonamientoN = [
     answer2: '20',
     answer3: '30',
     answer4: '40',
+    answerC: '20',
   },
   {
     id: 26,
@@ -1364,6 +1518,7 @@ export const dataRazonamientoN = [
     answer2: '40',
     answer3: '30',
     answer4: '20',
+    answerC: '20',
   },
   {
     id: 27,
@@ -1373,6 +1528,7 @@ export const dataRazonamientoN = [
     answer2: '42',
     answer3: '10',
     answer4: '12',
+    answerC: '42',
   },
   {
     id: 28,
@@ -1382,6 +1538,7 @@ export const dataRazonamientoN = [
     answer2: '7.07',
     answer3: '5.04',
     answer4: '7.54',
+    answerC: '7.07',
   },
   {
     id: 29,
@@ -1391,6 +1548,7 @@ export const dataRazonamientoN = [
     answer2: '86.2%',
     answer3: '12.5%',
     answer4: '12.8%',
+    answerC: '12.8%',
   },
   {
     id: 30,
@@ -1399,6 +1557,7 @@ export const dataRazonamientoN = [
     answer2: '10',
     answer3: '15',
     answer4: '20',
+    answerC: '10',
   },
   {
     id: 31,
@@ -1408,6 +1567,7 @@ export const dataRazonamientoN = [
     answer2: '2',
     answer3: '1',
     answer4: '3',
+    answerC: '2',
   },
   {
     id: 32,
@@ -1417,6 +1577,7 @@ export const dataRazonamientoN = [
     answer2: '7.21',
     answer3: '5.04',
     answer4: '7.07',
+    answerC: '7.07',
   },
   {
     id: 33,
@@ -1426,6 +1587,7 @@ export const dataRazonamientoN = [
     answer2: '9',
     answer3: '7.50',
     answer4: '8',
+    answerC: '4.50',
   },
   {
     id: 34,
@@ -1435,6 +1597,7 @@ export const dataRazonamientoN = [
     answer2: '120',
     answer3: '30',
     answer4: '90',
+    answerC: '90',
   },
   {
     id: 35,
@@ -1444,6 +1607,7 @@ export const dataRazonamientoN = [
     answer2: '86.2%',
     answer3: '87.2%',
     answer4: '12.5%',
+    answerC: '12.8%',
   },
   {
     id: 36,
@@ -1453,6 +1617,7 @@ export const dataRazonamientoN = [
     answer2: '250',
     answer3: '300',
     answer4: '350',
+    answerC: '300',
   },
   {
     id: 37,
@@ -1462,6 +1627,7 @@ export const dataRazonamientoN = [
     answer2: '55',
     answer3: '50',
     answer4: '45',
+    answerC: '50',
   },
   {
     id: 38,
@@ -1471,6 +1637,7 @@ export const dataRazonamientoN = [
     answer2: '54.18',
     answer3: '64.18',
     answer4: '367.45',
+    answerC: '377.43',
   },
   {
     id: 39,
@@ -1480,6 +1647,7 @@ export const dataRazonamientoN = [
     answer2: '5',
     answer3: '6',
     answer4: '4',
+    answerC: '6',
   },
   {
     id: 40,
@@ -1489,6 +1657,7 @@ export const dataRazonamientoN = [
     answer2: '22',
     answer3: '11',
     answer4: '4',
+    answerC: '1',
   },
   {
     id: 41,
@@ -1498,6 +1667,7 @@ export const dataRazonamientoN = [
     answer2: '25 tomates',
     answer3: '20 tomates',
     answer4: '15 tomates',
+    answerC: '20 tomates',
   },
   {
     id: 42,
@@ -1507,6 +1677,7 @@ export const dataRazonamientoN = [
     answer2: '25',
     answer3: '20',
     answer4: '30',
+    answerC: '20',
   },
   {
     id: 43,
@@ -1516,6 +1687,7 @@ export const dataRazonamientoN = [
     answer2: '0.28',
     answer3: '0.25',
     answer4: '0.20',
+    answerC: '0.35',
   },
   {
     id: 44,
@@ -1525,6 +1697,7 @@ export const dataRazonamientoN = [
     answer2: '0.80',
     answer3: '0.85',
     answer4: '0.90',
+    answerC: '0.95',
   },
   {
     id: 45,
@@ -1534,6 +1707,7 @@ export const dataRazonamientoN = [
     answer2: '906',
     answer3: '896',
     answer4: '886',
+    answerC: '866',
   },
   {
     id: 46,
@@ -1543,5 +1717,6 @@ export const dataRazonamientoN = [
     answer2: '15',
     answer3: '20',
     answer4: '30',
+    answerC: '10',
   },
 ];
