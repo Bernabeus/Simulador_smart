@@ -124,13 +124,13 @@ function BodyC() {
       } else {
         window.alert('Seleccione un curso');
       }*/
+
       router.push({
         pathname: '/testC',
         query: { dataUser: arrayUserData },
-        });
-        
-      console.log(arrayUserData);
+      });
 
+      console.log(arrayUserData);
     } catch (e) {
       const { response } = e;
       setResult('Ocurrió un error :(');

@@ -8,6 +8,7 @@ import OfflinePinIcon from '@material-ui/icons/OfflinePin';
 import ExtensionIcon from '@material-ui/icons/Extension';
 import FontDownloadIcon from '@material-ui/icons/FontDownload';
 import Timer10Icon from '@material-ui/icons/Timer10';
+import { writeUserData } from './initFirebase';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
@@ -133,22 +134,46 @@ const useStyles = makeStyles((theme) => ({
 
 const BodyR = (props) => {
   const router = useRouter();
+  const { dataUser } = router.query;
   const classes = useStyles();
   const [stateComponent, setStateComponent] = useState(1);
-  const [puntajeTotal, setPuntajeTotal] = useState(0);
-  console.log('puntaje de todos', props.envPunt);
+  const [puntajeTotal, setPuntajeTotal] = useState(-1);
+  const [puntajeA, setPuntajeA] = useState(0);
+  const [puntajeB, setPuntajeB] = useState(0);
+  const [puntajeC, setPuntajeC] = useState(0);
+  const [puntajeD, setPuntajeD] = useState(0);
 
   useEffect(() => {
     puntaje();
   }, []);
 
   function puntaje() {
-    const puntD = Number(props.envPunt[1][1]);
-    const puntC = Number(props.envPunt[1][3]);
-    const puntT =
-      (props.envPunt[1][0] + puntD + puntC + props.envPunt[1][2]) / 4;
+    console.log(props.envPunt);
+    var puntD = 0;
+    var puntC = 0;
+    var puntA = 0;
+    var puntB = 0;
+    if (props.envPunt[0]) {
+      if (props.envPunt[0][0]) {
+        puntA = Number(props.envPunt[0][0]);
+      }
+      if (props.envPunt[0][1]) {
+        puntB = Number(props.envPunt[0][1]);
+      }
+      if (props.envPunt[0][2]) {
+        puntC = Number(props.envPunt[0][2]);
+      }
+      if (props.envPunt[0][3]) {
+        puntD = Number(props.envPunt[0][3]);
+      }
+    }
+    const puntT = (puntA + puntD + puntC + puntB) / 4;
     puntT = puntT.toFixed(2);
     setPuntajeTotal(puntT);
+    setPuntajeA(puntA);
+    setPuntajeB(puntB);
+    setPuntajeC(puntC);
+    setPuntajeD(puntD);
   }
 
   const saveR = () => {
@@ -157,100 +182,156 @@ const BodyR = (props) => {
 
   //Firebase
   function saveData() {
+    var arrayDatos = JSON.parse(dataUser);
+
+    const puntAten = {
+      puntAtencion: props.envPunt[1][0],
+    };
+
+    const puntRazL = {
+      puntRazonaLog: props.envPunt[1][1],
+    };
+
+    const puntRazV = {
+      puntRazonaVer: props.envPunt[1][2],
+    };
+
+    const puntRazN = {
+      puntRazonaNum: props.envPunt[1][3],
+    };
+
+    const puntTotal = {
+      puntTotal: puntajeTotal,
+    };
+
+    arrayDatos = Object.assign(
+      arrayDatos,
+      puntAten,
+      puntRazL,
+      puntRazV,
+      puntRazN,
+      puntTotal
+    );
+
+    writeUserData(
+      arrayDatos.apellido,
+      arrayDatos.nombre,
+      arrayDatos.colegio,
+      arrayDatos.email,
+      arrayDatos.paralelo,
+      arrayDatos.numEstudiante,
+      arrayDatos.numRepresentante,
+      arrayDatos.puntAtencion,
+      arrayDatos.puntRazonaLog,
+      arrayDatos.puntRazonaVer,
+      arrayDatos.puntRazonaNum,
+      arrayDatos.puntTotal
+    );
+
     router.push('/');
   }
 
   return (
     <Grid>
-      <Grid>
-        <Typography variant="h5" className={classes.textT}>
-          Resultados
-        </Typography>
-        <Divider />
-      </Grid>
-      <Grid container className={classes.contR}>
-        <Grid item xs={6} sm={3} className={classes.contT}>
-          <Grid container className={classes.contT1}>
-            <OfflinePinIcon className={classes.icon} />
-            <Typography variant="h4" className={classes.text}>
-              Atención y concentración
-            </Typography>
-          </Grid>
-          <Divider style={{ backgroundColor: '#fff' }} />
-          <Grid className={classes.contT2}>
-            <Typography className={classes.textP}>
-              {props.envPunt[1][0]} / 1000
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item xs={6} sm={3} className={classes.contT}>
-          <Grid container className={classes.contT1}>
-            <ExtensionIcon className={classes.icon} />
-            <Typography variant="h4" className={classes.text}>
-              Razonamiento Lógico
-            </Typography>
-          </Grid>
-          <Divider style={{ backgroundColor: '#fff' }} />
-          <Grid className={classes.contT2}>
-            <Typography className={classes.textP}>
-              {props.envPunt[1][1]} / 1000
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item xs={6} sm={3} className={classes.contT}>
-          <Grid container className={classes.contT1}>
-            <FontDownloadIcon className={classes.icon} />
-            <Typography variant="h4" className={classes.text}>
-              Razonamiento Verbal
-            </Typography>
-          </Grid>
-          <Divider style={{ backgroundColor: '#fff' }} />
-          <Grid className={classes.contT2}>
-            <Typography className={classes.textP}>
-              {props.envPunt[1][2]} / 1000
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item xs={6} sm={3} className={classes.contT}>
-          <Grid container className={classes.contT1}>
-            <Timer10Icon className={classes.icon} />
-            <Typography variant="h4" className={classes.text}>
-              Razonamiento Numérico
-            </Typography>
-          </Grid>
-          <Divider style={{ backgroundColor: '#fff' }} />
-          <Grid className={classes.contT2}>
-            <Typography className={classes.textP}>
-              {props.envPunt[1][3]} / 1000
-            </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid container className={classes.conT3}>
-        <Grid item xs></Grid>
-        <Grid item xs={4} className={classes.contT4}>
+      {props.envPunt[0] ? (
+        <Grid>
           <Grid>
-            <Typography className={classes.textPT}>Puntaje Total</Typography>
-          </Grid>
-          <Divider style={{ backgroundColor: '#fff' }} />
-          <Grid style={{ paddingTop: 20 }}>
-            <Typography className={classes.textPT}>
-              {puntajeTotal} / 1000
+            <Typography variant="h5" className={classes.textT}>
+              Resultados
             </Typography>
+            <Divider />
+          </Grid>
+          <Grid container className={classes.contR}>
+            <Grid item xs={6} sm={3} className={classes.contT}>
+              <Grid container className={classes.contT1}>
+                <OfflinePinIcon className={classes.icon} />
+                <Typography variant="h4" className={classes.text}>
+                  Atención y concentración
+                </Typography>
+              </Grid>
+              <Divider style={{ backgroundColor: '#fff' }} />
+              <Grid className={classes.contT2}>
+                <Typography className={classes.textP}>
+                  {puntajeA} / 1000
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid item xs={6} sm={3} className={classes.contT}>
+              <Grid container className={classes.contT1}>
+                <ExtensionIcon className={classes.icon} />
+                <Typography variant="h4" className={classes.text}>
+                  Razonamiento Lógico
+                </Typography>
+              </Grid>
+              <Divider style={{ backgroundColor: '#fff' }} />
+              <Grid className={classes.contT2}>
+                <Typography className={classes.textP}>
+                  {puntajeB} / 1000
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid item xs={6} sm={3} className={classes.contT}>
+              <Grid container className={classes.contT1}>
+                <FontDownloadIcon className={classes.icon} />
+                <Typography variant="h4" className={classes.text}>
+                  Razonamiento Verbal
+                </Typography>
+              </Grid>
+              <Divider style={{ backgroundColor: '#fff' }} />
+              <Grid className={classes.contT2}>
+                <Typography className={classes.textP}>
+                  {puntajeC} / 1000
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid item xs={6} sm={3} className={classes.contT}>
+              <Grid container className={classes.contT1}>
+                <Timer10Icon className={classes.icon} />
+                <Typography variant="h4" className={classes.text}>
+                  Razonamiento Numérico
+                </Typography>
+              </Grid>
+              <Divider style={{ backgroundColor: '#fff' }} />
+              <Grid className={classes.contT2}>
+                <Typography className={classes.textP}>
+                  {puntajeD} / 1000
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid container className={classes.conT3}>
+            <Grid item xs></Grid>
+            <Grid item xs={4} className={classes.contT4}>
+              <Grid>
+                <Typography className={classes.textPT}>
+                  Puntaje Total
+                </Typography>
+              </Grid>
+              <Divider style={{ backgroundColor: '#fff' }} />
+              <Grid style={{ paddingTop: 20 }}>
+                <Typography className={classes.textPT}>
+                  {puntajeTotal} / 1000
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid item xs></Grid>
+          </Grid>
+          <Divider />
+          <Grid
+            style={{ paddingTop: 20, textAlign: 'center', paddingBottom: 50 }}
+          >
+            <Button
+              variant="outlined"
+              className={classes.button}
+              onClick={() => saveR()}
+            >
+              Guardar resultados y salir
+            </Button>
           </Grid>
         </Grid>
-        <Grid item xs></Grid>
-      </Grid>
-      <Divider />
-      <Grid style={{ paddingTop: 20, textAlign: 'center', paddingBottom: 50 }}>
-        <Button
-          variant="outlined"
-          className={classes.button}
-          onClick={() => saveR()}
-        >
-          Guardar resultados y salir
-        </Button>
-      </Grid>
+      ) : (
+        <div></div>
+      )}
     </Grid>
   );
 };

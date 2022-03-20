@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import styles from '../../styles/Home.module.css';
 import { Grid } from '@material-ui/core';
@@ -7,7 +7,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Image from 'next/image';
 import logoH from '../../../public/images/logoHB.png';
 import '@fontsource/montserrat';
-import { useRouter } from 'next/router';
 import BodyS from '../../components/BodySim';
 import HeaderS from '../../components/HeaderSim';
 
