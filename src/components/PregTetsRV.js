@@ -1,577 +1,277 @@
 import React, { useEffect, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { useRouter } from 'next/router';
-import PregAtencion from './PregRazonV';
-import Button from '@material-ui/core/Button';
-import { dataRazonamientoV } from './DataTest.js';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import '@fontsource/montserrat';
 
-const PregTets = ({ onValuesPreg }) => {
+const useStyles = makeStyles((theme) => ({
+  text: {
+    paddingLeft: 25,
+    paddingRight: 25,
+    fontFamily: 'Montserrat',
+    // fontWeight: "600",
+    // color: "#fff",
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '2.9vw',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2.2vw',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.5vw',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.2vw',
+    },
+  },
+  textA: {
+    paddingRight: 25,
+    fontFamily: 'Montserrat',
+    // fontWeight: "600",
+    // color: "#fff",
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '2.9vw',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2.2vw',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1.5vw',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.2vw',
+    },
+  },
+
+  cont: {
+    paddingBottom: 30,
+  },
+  cont1: {
+    paddingTop: 20,
+    paddingBottom: 20,
+    display: 'flex',
+    alignItems: 'center',
+    borderLeft: '2px solid #67778F',
+    borderTop: '2px solid #67778F',
+    borderRight: '2px solid #67778F',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+  },
+  cont2: {
+    paddingLeft: 50,
+    borderBottom: '2px solid #67778F',
+    borderLeft: '2px solid #67778F',
+    borderRight: '2px solid #67778F',
+    paddingBottom: 20,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+  },
+  cont3: {
+    textAlign: 'center',
+  },
+  contT1: {
+    height: 70,
+    display: 'flex',
+    alignItems: 'center',
+    borderLeft: '2px solid #67778F',
+    borderTop: '2px solid #67778F',
+    borderRight: '2px solid #67778F',
+  },
+  img: {
+    borderLeft: '2px solid #67778F',
+    borderRight: '2px solid #67778F',
+    textAlign: 'center',
+  },
+  button: {
+    fontFamily: 'Montserrat',
+    fontWeight: '600',
+    color: '#1C2E93',
+  },
+  textT: {
+    fontFamily: 'Montserrat',
+    color: '#fff',
+    paddingLeft: 10,
+    [theme.breakpoints.up('xs')]: {
+      fontSize: '3.5vw',
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2.5vw',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2vw',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '1.5vw',
+    },
+  },
+}));
+
+const PregRazV = ({ onSelectionPreg }) => {
+  const classes = useStyles();
   const router = useRouter();
   const [value1, setValue1] = useState(0);
-  const [value2, setValue2] = useState(0);
-  const [value3, setValue3] = useState(0);
-  const [value4, setValue4] = useState(0);
-  const [value5, setValue5] = useState(0);
-  const [value6, setValue6] = useState(0);
-  const [value7, setValue7] = useState(0);
-  const [value8, setValue8] = useState(0);
-  const [value9, setValue9] = useState(0);
-  const [value10, setValue10] = useState(0);
-  const [value11, setValue11] = useState(0);
-  const [value12, setValue12] = useState(0);
-  const [value13, setValue13] = useState(0);
-  const [value14, setValue14] = useState(0);
-  const [value15, setValue15] = useState(0);
-  const [value16, setValue16] = useState(0);
-  const [value17, setValue17] = useState(0);
-  const [value18, setValue18] = useState(0);
-  const [value19, setValue19] = useState(0);
-  const [value20, setValue20] = useState(0);
-  const [value21, setValue21] = useState(0);
-  const [value22, setValue22] = useState(0);
-  const [value23, setValue23] = useState(0);
-  const [value24, setValue24] = useState(0);
-  const [value25, setValue25] = useState(0);
-  const [value26, setValue26] = useState(0);
-  const [value27, setValue27] = useState(0);
-  const [value28, setValue28] = useState(0);
-  const [value29, setValue29] = useState(0);
-  const [value30, setValue30] = useState(0);
-  const [value31, setValue31] = useState(0);
-  const [value32, setValue32] = useState(0);
-  const [value33, setValue33] = useState(0);
-  const [value34, setValue34] = useState(0);
-  const [value35, setValue35] = useState(0);
-  const [value36, setValue36] = useState(0);
-  const [value37, setValue37] = useState(0);
-  const [value38, setValue38] = useState(0);
-  const [value39, setValue39] = useState(0);
-  const [value40, setValue40] = useState(0);
+  const [dataAp, setDataAp] = useState([]);
 
-  function newArray(val) {
-    let arrayN = [];
-    arrayN.push(dataRazonamientoV[val]);
-    return arrayN;
-  }
-
-  const handleChangeValue1 = (valor) => {
-    var arrayD = newArray(0);
-    if (valor != null) {
-      setValue1(valor);
-    }
-    return arrayD[0];
+  const handleRadioChange1 = (event) => {
+    setValue1(event.target.value);
+    onSelectionPreg(event.target.value);
   };
 
-  const handleChangeValue2 = (valor) => {
-    var arrayD = newArray(1);
-    if (valor != null) {
-      setValue2(valor);
-    }
-    return arrayD[0];
-  };
+  useEffect(() => {
+    newArray();
+  }, [onSelectionPreg]);
 
-  const handleChangeValue3 = (valor) => {
-    var arrayD = newArray(2);
-    if (valor != null) {
-      setValue3(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue4 = (valor) => {
-    var arrayD = newArray(3);
-    if (valor != null) {
-      setValue4(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue5 = (valor) => {
-    var arrayD = newArray(4);
-    if (valor != null) {
-      setValue5(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue6 = (valor) => {
-    var arrayD = newArray(5);
-    if (valor != null) {
-      setValue6(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue7 = (valor) => {
-    var arrayD = newArray(6);
-    if (valor != null) {
-      setValue7(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue8 = (valor) => {
-    var arrayD = newArray(7);
-    if (valor != null) {
-      setValue8(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue9 = (valor) => {
-    var arrayD = newArray(8);
-    if (valor != null) {
-      setValue9(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue10 = (valor) => {
-    var arrayD = newArray(9);
-    if (valor != null) {
-      setValue10(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue11 = (valor) => {
-    var arrayD = newArray(10);
-    if (valor != null) {
-      setValue11(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue12 = (valor) => {
-    var arrayD = newArray(11);
-    if (valor != null) {
-      setValue12(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue13 = (valor) => {
-    var arrayD = newArray(12);
-    if (valor != null) {
-      setValue13(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue14 = (valor) => {
-    var arrayD = newArray(13);
-    if (valor != null) {
-      setValue14(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue15 = (valor) => {
-    var arrayD = newArray(14);
-    if (valor != null) {
-      setValue15(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue16 = (valor) => {
-    var arrayD = newArray(15);
-    if (valor != null) {
-      setValue16(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue17 = (valor) => {
-    var arrayD = newArray(16);
-    if (valor != null) {
-      setValue17(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue18 = (valor) => {
-    var arrayD = newArray(17);
-    if (valor != null) {
-      setValue18(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue19 = (valor) => {
-    var arrayD = newArray(18);
-    if (valor != null) {
-      setValue19(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue20 = (valor) => {
-    var arrayD = newArray(19);
-    if (valor != null) {
-      setValue20(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue21 = (valor) => {
-    var arrayD = newArray(20);
-    if (valor != null) {
-      setValue21(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue22 = (valor) => {
-    var arrayD = newArray(21);
-    if (valor != null) {
-      setValue22(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue23 = (valor) => {
-    var arrayD = newArray(22);
-    if (valor != null) {
-      setValue23(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue24 = (valor) => {
-    var arrayD = newArray(23);
-    if (valor != null) {
-      setValue24(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue25 = (valor) => {
-    var arrayD = newArray(24);
-    if (valor != null) {
-      setValue25(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue26 = (valor) => {
-    var arrayD = newArray(25);
-    if (valor != null) {
-      setValue26(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue27 = (valor) => {
-    var arrayD = newArray(26);
-    if (valor != null) {
-      setValue27(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue28 = (valor) => {
-    var arrayD = newArray(27);
-    if (valor != null) {
-      setValue28(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue29 = (valor) => {
-    var arrayD = newArray(28);
-    if (valor != null) {
-      setValue29(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue30 = (valor) => {
-    var arrayD = newArray(29);
-    if (valor != null) {
-      setValue30(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue31 = (valor) => {
-    var arrayD = newArray(30);
-    if (valor != null) {
-      setValue31(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue32 = (valor) => {
-    var arrayD = newArray(31);
-    if (valor != null) {
-      setValue32(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue33 = (valor) => {
-    var arrayD = newArray(32);
-    if (valor != null) {
-      setValue33(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue34 = (valor) => {
-    var arrayD = newArray(33);
-    if (valor != null) {
-      setValue34(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue35 = (valor) => {
-    var arrayD = newArray(34);
-    if (valor != null) {
-      setValue35(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue36 = (valor) => {
-    var arrayD = newArray(35);
-    if (valor != null) {
-      setValue36(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue37 = (valor) => {
-    var arrayD = newArray(36);
-    if (valor != null) {
-      setValue37(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue38 = (valor) => {
-    var arrayD = newArray(37);
-    if (valor != null) {
-      setValue38(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue39 = (valor) => {
-    var arrayD = newArray(38);
-    if (valor != null) {
-      setValue39(valor);
-    }
-    return arrayD[0];
-  };
-
-  const handleChangeValue40 = (valor) => {
-    var arrayD = newArray(39);
-    if (valor != null) {
-      setValue40(valor);
-    }
-    return arrayD[0];
-  };
-
-  async function sendValues() {
-    const arrayA = [];
-    arrayA.push(value1);
-    arrayA.push(value2);
-    arrayA.push(value3);
-    arrayA.push(value4);
-    arrayA.push(value5);
-    arrayA.push(value6);
-    arrayA.push(value7);
-    arrayA.push(value8);
-    arrayA.push(value9);
-    arrayA.push(value10);
-    arrayA.push(value11);
-    arrayA.push(value12);
-    arrayA.push(value13);
-    arrayA.push(value14);
-    arrayA.push(value15);
-    arrayA.push(value16);
-    arrayA.push(value17);
-    arrayA.push(value18);
-    arrayA.push(value19);
-    arrayA.push(value20);
-    arrayA.push(value21);
-    arrayA.push(value22);
-    arrayA.push(value23);
-    arrayA.push(value24);
-    arrayA.push(value25);
-    arrayA.push(value26);
-    arrayA.push(value27);
-    arrayA.push(value28);
-    arrayA.push(value29);
-    arrayA.push(value30);
-    arrayA.push(value31);
-    arrayA.push(value32);
-    arrayA.push(value33);
-    arrayA.push(value34);
-    arrayA.push(value35);
-    arrayA.push(value36);
-    arrayA.push(value37);
-    arrayA.push(value38);
-    arrayA.push(value39);
-    arrayA.push(value40);
-
-    var puntaje = 0;
-
-    for (var i = 0; i < dataRazonamientoV.length; i++) {
-      if (arrayA[i] == dataRazonamientoV[i].answerC) {
-        puntaje = puntaje + 1;
-      }
-    }
-    var estado = 4;
-    onValuesPreg(puntaje, arrayA, estado);
+  function newArray() {
+    var arrayData = onSelectionPreg();
+    //console.log(arrayData);
+    setDataAp(arrayData);
   }
 
   return (
-    <Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue1} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue2} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue3} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue4} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue5} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue6} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue7} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue8} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue9} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue10} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue11} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue12} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue13} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue14} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue15} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue16} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue17} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue18} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue19} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue20} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue21} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue22} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue23} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue24} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue25} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue26} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue27} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue28} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue29} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue30} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue31} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue32} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue33} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue34} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue35} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue36} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue37} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue38} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue39} />
-      </Grid>
-      <Grid>
-        <PregAtencion onSelectionPreg={handleChangeValue40} />
-      </Grid>
-
-      <Grid style={{ paddingBottom: 30, textAlign: 'center' }}>
-        <Button
-          variant="outlined"
-          onClick={() => sendValues()}
-          style={{
-            fontFamily: 'Montserrat',
-            fontWeight: 'bold',
-            color: '#fff',
-            backgroundColor: '#763484',
-          }}
-        >
-          Siguiente
-        </Button>
-      </Grid>
+    <Grid
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      {dataAp.id ? (
+        <Grid style={{ width: 800 }}>
+          {dataAp.id == 1 ? (
+            <Grid>
+              <Grid
+                style={{
+                  backgroundColor: '#5DA4E1',
+                  height: 50,
+                  display: 'flex',
+                  alignItems: 'center',
+                  borderTopLeftRadius: 30,
+                  borderTopRightRadius: 30,
+                }}
+              >
+                <Typography variant="h5" className={classes.textT}>
+                  Razonamiento Verbal:
+                </Typography>
+              </Grid>
+              <Grid>
+                <Grid className={classes.cont}>
+                  <Grid className={classes.contT1}>
+                    <Typography variant="h5" className={classes.text}>
+                      {dataAp.question}
+                    </Typography>
+                  </Grid>
+                  <Grid className={classes.cont2}>
+                    <RadioGroup
+                      value={value1}
+                      onChange={handleRadioChange1}
+                      name="customized-radios"
+                    >
+                      <FormControlLabel
+                        value={dataAp.answer1}
+                        control={<Radio />}
+                        label={
+                          <Typography variant="h5" className={classes.textA}>
+                            {dataAp.answer1}
+                          </Typography>
+                        }
+                      />
+                      <FormControlLabel
+                        value={dataAp.answer2}
+                        control={<Radio />}
+                        label={
+                          <Typography variant="h5" className={classes.textA}>
+                            {dataAp.answer2}
+                          </Typography>
+                        }
+                      />
+                      <FormControlLabel
+                        value={dataAp.answer3}
+                        control={<Radio />}
+                        label={
+                          <Typography variant="h5" className={classes.textA}>
+                            {dataAp.answer3}
+                          </Typography>
+                        }
+                      />
+                      <FormControlLabel
+                        value={dataAp.answer4}
+                        control={<Radio />}
+                        label={
+                          <Typography variant="h5" className={classes.textA}>
+                            {dataAp.answer4}
+                          </Typography>
+                        }
+                      />
+                    </RadioGroup>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+          ) : (
+            <Grid>
+              <Grid className={classes.cont}>
+                <Grid className={classes.cont1}>
+                  <Typography variant="h5" className={classes.text}>
+                    {dataAp.question}
+                  </Typography>
+                </Grid>
+                <Grid className={classes.cont2}>
+                  <RadioGroup
+                    value={value1}
+                    onChange={handleRadioChange1}
+                    name="customized-radios"
+                  >
+                    <FormControlLabel
+                      value={dataAp.answer1}
+                      control={<Radio />}
+                      label={
+                        <Typography variant="h5" className={classes.textA}>
+                          {dataAp.answer1}
+                        </Typography>
+                      }
+                    />
+                    <FormControlLabel
+                      value={dataAp.answer2}
+                      control={<Radio />}
+                      label={
+                        <Typography variant="h5" className={classes.textA}>
+                          {dataAp.answer2}
+                        </Typography>
+                      }
+                    />
+                    <FormControlLabel
+                      value={dataAp.answer3}
+                      control={<Radio />}
+                      label={
+                        <Typography variant="h5" className={classes.textA}>
+                          {dataAp.answer3}
+                        </Typography>
+                      }
+                    />
+                    <FormControlLabel
+                      value={dataAp.answer4}
+                      control={<Radio />}
+                      label={
+                        <Typography variant="h5" className={classes.textA}>
+                          {dataAp.answer4}
+                        </Typography>
+                      }
+                    />
+                  </RadioGroup>
+                </Grid>
+              </Grid>
+            </Grid>
+          )}
+        </Grid>
+      ) : (
+        <div></div>
+      )}
     </Grid>
   );
 };
 
-export default PregTets;
-
-/*
-
-
-*/
+export default PregRazV;

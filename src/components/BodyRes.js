@@ -148,24 +148,21 @@ const BodyR = (props) => {
   }, []);
 
   function puntaje() {
-    console.log(props.envPunt);
     var puntD = 0;
     var puntC = 0;
     var puntA = 0;
     var puntB = 0;
     if (props.envPunt[0]) {
-      if (props.envPunt[0][0]) {
-        puntA = Number(props.envPunt[0][0]);
-      }
-      if (props.envPunt[0][1]) {
-        puntB = Number(props.envPunt[0][1]);
-      }
-      if (props.envPunt[0][2]) {
-        puntC = Number(props.envPunt[0][2]);
-      }
-      if (props.envPunt[0][3]) {
-        puntD = Number(props.envPunt[0][3]);
-      }
+      puntA = Number(props.envPunt[0]);
+    }
+    if (props.envPunt[1]) {
+      puntB = Number(props.envPunt[1]);
+    }
+    if (props.envPunt[2]) {
+      puntC = Number(props.envPunt[2]);
+    }
+    if (props.envPunt[3]) {
+      puntD = Number(props.envPunt[3]);
     }
     const puntT = (puntA + puntD + puntC + puntB) / 4;
     puntT = puntT.toFixed(2);
@@ -183,21 +180,37 @@ const BodyR = (props) => {
   //Firebase
   function saveData() {
     var arrayDatos = JSON.parse(dataUser);
+    var puntD = 0;
+    var puntC = 0;
+    var puntA = 0;
+    var puntB = 0;
+    if (props.envPunt[0]) {
+      puntA = Number(props.envPunt[0]);
+    }
+    if (props.envPunt[1]) {
+      puntB = Number(props.envPunt[1]);
+    }
+    if (props.envPunt[2]) {
+      puntC = Number(props.envPunt[2]);
+    }
+    if (props.envPunt[3]) {
+      puntD = Number(props.envPunt[3]);
+    }
 
     const puntAten = {
-      puntAtencion: props.envPunt[1][0],
+      puntAtencion: puntA,
     };
 
     const puntRazL = {
-      puntRazonaLog: props.envPunt[1][1],
+      puntRazonaLog: puntB,
     };
 
     const puntRazV = {
-      puntRazonaVer: props.envPunt[1][2],
+      puntRazonaVer: puntC,
     };
 
     const puntRazN = {
-      puntRazonaNum: props.envPunt[1][3],
+      puntRazonaNum: puntD,
     };
 
     const puntTotal = {
@@ -219,6 +232,7 @@ const BodyR = (props) => {
       arrayDatos.colegio,
       arrayDatos.email,
       arrayDatos.paralelo,
+      arrayDatos.preU,
       arrayDatos.numEstudiante,
       arrayDatos.numRepresentante,
       arrayDatos.puntAtencion,

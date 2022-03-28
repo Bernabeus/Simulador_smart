@@ -261,19 +261,6 @@ const PregRazV = ({ onSelectionPreg }) => {
                         </Typography>
                       }
                     />
-                    {dataAp.answer5 ? (
-                      <FormControlLabel
-                        value={dataAp.answer5}
-                        control={<Radio />}
-                        label={
-                          <Typography variant="h5" className={classes.textA}>
-                            {dataAp.answer5}
-                          </Typography>
-                        }
-                      />
-                    ) : (
-                      ''
-                    )}
                   </RadioGroup>
                 </Grid>
               </Grid>

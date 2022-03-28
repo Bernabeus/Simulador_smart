@@ -7,7 +7,6 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import '@fontsource/montserrat';
-import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   text: {

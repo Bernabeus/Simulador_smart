@@ -7,10 +7,6 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import '@fontsource/montserrat';
-import Image from 'next/image';
-import preg25 from '../../public/images/Preg25_4.png';
-import preg26 from '../../public/images/Preg26_4.png';
-import preg30 from '../../public/images/Preg30_4.png';
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -223,21 +219,6 @@ const PregRazN = ({ onSelectionPreg }) => {
                     {dataAp.question}
                   </Typography>
                 </Grid>
-                {dataAp.id == 25 ? (
-                  <Grid className={classes.img}>
-                    <Image src={preg25} />
-                  </Grid>
-                ) : dataAp.id == 26 ? (
-                  <Grid className={classes.img}>
-                    <Image src={preg26} />
-                  </Grid>
-                ) : dataAp.id == 30 ? (
-                  <Grid className={classes.img}>
-                    <Image src={preg30} />
-                  </Grid>
-                ) : (
-                  <div></div>
-                )}
 
                 <Grid className={classes.cont2}>
                   <RadioGroup

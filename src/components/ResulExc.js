@@ -98,26 +98,28 @@ const CodText = () => {
     email,
     cole,
     para,
+    preU,
     numE,
     numR,
+    puntT,
     puntA,
     puntRL,
     puntRV,
-    puntRN,
-    puntT
+    puntRN
   ) {
     return {
       name,
       email,
       cole,
       para,
+      preU,
       numE,
       numR,
+      puntT,
       puntA,
       puntRL,
       puntRV,
       puntRN,
-      puntT,
     };
   }
 
@@ -142,18 +144,19 @@ const CodText = () => {
     for (var i = 0; i < userArray.length; i++) {
       const arrayU = [
         {
-          apellidos: userArray[i].apellidos,
-          colegio: userArray[i].colegio,
-          email: userArray[i].email,
-          nombres: userArray[i].nombres,
-          paralelo: userArray[i].paralelo,
-          numeroEstudiante: userArray[i].numEstudiante,
-          numeroRepresentante: userArray[i].numRepresentante,
-          puntajeAtencion: userArray[i].puntAtencion,
-          puntajeRazLogico: userArray[i].puntRazonamientoL,
-          puntajeRazNumerico: userArray[i].puntRazonamientoN,
-          puntajeRazVerbal: userArray[i].puntRazonamientoV,
-          puntajeTotal: userArray[i].puntTotal,
+          Apellidos: userArray[i].apellidos,
+          Colegio: userArray[i].colegio,
+          Email: userArray[i].email,
+          Nombres: userArray[i].nombres,
+          Paralelo: userArray[i].paralelo,
+          PreUniversitario: userArray[i].preUniversitario,
+          NumeroEstudiante: userArray[i].numEstudiante,
+          NumeroRepresentante: userArray[i].numRepresentante,
+          PuntajeAtencion: userArray[i].puntAtencion,
+          PuntajeRazLogico: userArray[i].puntRazonamientoL,
+          PuntajeRazNumerico: userArray[i].puntRazonamientoN,
+          PuntajeRazVerbal: userArray[i].puntRazonamientoV,
+          PuntajeTotal: userArray[i].puntTotal,
         },
       ];
 
@@ -168,13 +171,14 @@ const CodText = () => {
           userArray[i].email,
           userArray[i].colegio,
           userArray[i].paralelo,
+          userArray[i].preUniversitario,
           userArray[i].numEstudiante,
           userArray[i].numRepresentante,
+          userArray[i].puntTotal,
           userArray[i].puntAtencion,
           userArray[i].puntRazonamientoL,
           userArray[i].puntRazonamientoV,
-          userArray[i].puntRazonamientoN,
-          userArray[i].puntTotal
+          userArray[i].puntRazonamientoN
         )
       );
     }
@@ -258,12 +262,22 @@ const CodText = () => {
                           </TableCell>
                           <TableCell align="right">
                             <Typography variant="h5" className={classes.textT}>
+                              Pre-Universitario
+                            </Typography>
+                          </TableCell>
+                          <TableCell align="right">
+                            <Typography variant="h5" className={classes.textT}>
                               Número del estudiante
                             </Typography>
                           </TableCell>
                           <TableCell align="right">
                             <Typography variant="h5" className={classes.textT}>
                               Número del representante
+                            </Typography>
+                          </TableCell>
+                          <TableCell align="right">
+                            <Typography variant="h5" className={classes.textT}>
+                              Resultado total
                             </Typography>
                           </TableCell>
                           <TableCell align="right">
@@ -284,11 +298,6 @@ const CodText = () => {
                           <TableCell align="right">
                             <Typography variant="h5" className={classes.textT}>
                               Resultado en razonamiento numérico
-                            </Typography>
-                          </TableCell>
-                          <TableCell align="right">
-                            <Typography variant="h5" className={classes.textT}>
-                              Resultado total
                             </Typography>
                           </TableCell>
                         </TableRow>
@@ -318,12 +327,22 @@ const CodText = () => {
                             </TableCell>
                             <TableCell align="right">
                               <Typography variant="h5" className={classes.text}>
+                                {row.preU}
+                              </Typography>
+                            </TableCell>
+                            <TableCell align="right">
+                              <Typography variant="h5" className={classes.text}>
                                 {row.numE}
                               </Typography>
                             </TableCell>
                             <TableCell align="right">
                               <Typography variant="h5" className={classes.text}>
                                 {row.numR}
+                              </Typography>
+                            </TableCell>
+                            <TableCell align="right">
+                              <Typography variant="h5" className={classes.text}>
+                                {row.puntT}
                               </Typography>
                             </TableCell>
                             <TableCell align="right">
@@ -344,11 +363,6 @@ const CodText = () => {
                             <TableCell align="right">
                               <Typography variant="h5" className={classes.text}>
                                 {row.puntRN}
-                              </Typography>
-                            </TableCell>
-                            <TableCell align="right">
-                              <Typography variant="h5" className={classes.text}>
-                                {row.puntT}
                               </Typography>
                             </TableCell>
                           </TableRow>

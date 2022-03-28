@@ -114,21 +114,15 @@ function BodyC() {
       userData['paralelo'] = par;
       var arrayUserData = JSON.stringify(userData);
 
-      /*
       if (value) {
-        userData['curso'] = value;
+        userData['preU'] = value;
         router.push({
-        pathname: '/testCHASIDE/0',
-        query: { dataUser: arrayUserData },
-      });
+          pathname: '/testC',
+          query: { dataUser: arrayUserData },
+        });
       } else {
-        window.alert('Seleccione un curso');
-      }*/
-
-      router.push({
-        pathname: '/testC',
-        query: { dataUser: arrayUserData },
-      });
+        window.alert('Conteste todas las preguntas');
+      }
 
       console.log(arrayUserData);
     } catch (e) {
@@ -294,6 +288,49 @@ function BodyC() {
                 <p style={{ color: '#fff000', fontWeight: '600' }}>
                   {errors.paralelo?.message}
                 </p>
+              </Grid>
+              <Grid item={true}>
+                <Grid style={{ paddingBottom: 15 }}>
+                  <Typography variant="h5" className={classes.textT}>
+                    Ha estado en un Pre Universitario, seleccione la respuesta:
+                  </Typography>
+                </Grid>
+                <Controller
+                  name="preU"
+                  control={control}
+                  className={classes.controller}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <RadioGroup
+                      defaultValue=""
+                      style={{ paddingLeft: 60, paddingBottom: 10 }}
+                      value={value}
+                      onChange={handleRadioChange}
+                      name="customized-radios"
+                    >
+                      <FormControlLabel
+                        {...field}
+                        value={`Si`}
+                        control={<Radio />}
+                        label={
+                          <Typography variant="h5" className={classes.textT}>
+                            Si
+                          </Typography>
+                        }
+                      />
+                      <FormControlLabel
+                        {...field}
+                        value={`No`}
+                        control={<Radio />}
+                        label={
+                          <Typography variant="h5" className={classes.textT}>
+                            No
+                          </Typography>
+                        }
+                      />
+                    </RadioGroup>
+                  )}
+                />
               </Grid>
               <Grid item={true}>
                 <Grid style={{ paddingBottom: 15 }}>
